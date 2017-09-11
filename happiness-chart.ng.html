@@ -1,0 +1,43 @@
+<div class="background">
+  	<div class="header">
+		<div>HAPPINESS OF LAST WEEK</div>
+		<div class="team-info">
+			<div class="team-title">{{layout.teamName}}</div>
+			<div class="week">{{week}}</div>	  
+		</div>
+  	</div>
+	<div class="data" ng-class="{'data-percentage': layout.percentage}">
+		<ul ng-class="{'ul-percentage': layout.percentage}" ng-repeat="data in amountAndPercentageData">
+		  <li class="amount" ng-repeat="x in data.amount" ng-if="!layout.percentage"></li>
+		  <div class="num-percentage" ng-if="layout.percentage && data.percentage > 0">{{data.percentage}}%</div>
+		  <div class="percentage" ng-if="layout.percentage" style="height:{{data.percentage}}%;"></div>
+		</ul>
+	</div>
+	<div class="line"></div>
+	<div class="smileys">
+		<div class="smiley">
+			<div class="smiley-img h-not-saying"></div>
+			<div class="smiley-text">Not saying</div>
+		</div>
+		<div class="smiley">
+			<div class="smiley-img h-depressed"></div>
+			<div class="smiley-text">Depressed</div>	
+		</div>
+		<div class="smiley">
+			<div class="smiley-img h-sad"></div>
+			<div class="smiley-text">Sad</div>	
+		</div>
+		<div class="smiley">
+			<div class="smiley-img h-content"></div>
+			<div class="smiley-text">Content</div>	
+		</div>
+		<div class="smiley">
+			<div class="smiley-img h-happy"></div>
+			<div class="smiley-text">Happy</div>	
+		</div>
+		<div class="smiley">
+			<div class="smiley-img h-ecstatic"></div>
+			<div class="smiley-text">Ecstatic</div>	
+		</div>
+	</div>
+</div>
